@@ -150,79 +150,80 @@ def secret_mission():
  ################################################
 
 def food_recommender():
-    pass
-print("WELCOMEE!! to the super duper awesome fabulous cool FOOD RECOMMENDER!!!\n")
-start = yes_or_no("✧｡٩(ˊᗜˋ )و✧*｡ \nREADY TO GET YOUR RECOMMENDATION?? ◝(ᵔᗜᵔ)◜")
-if start:
-    pass
-else:
-    print("oh ok then hater I hope your pillow is warm on both sides.")
-allergies = input("Do you have any dietary restrictions? ").strip().lower()
-n = 1
-while allergies.startswith("y") and n <= 3:
-    print("that's too bad.")
-    n += 1
+    print("WELCOMEE!! to the super duper awesome fabulous cool FOOD RECOMMENDER!!!\n")
+    start = yes_or_no("✧｡٩(ˊᗜˋ )و✧*｡ \n\nREADY TO GET YOUR RECOMMENDATION?? ◝(ᵔᗜᵔ)◜ ")
+    if not start:
+        print("oh ok then hater I hope your pillow is warm on both sides.")
+        return # ends the entire function
     allergies = input("Do you have any dietary restrictions? ").strip().lower()
-    if n == 3:
-        print("just stop asking.")
-        break # when the condition is met, BREAK out of the loop
-
-sweet_level = "would you like a dessert or snack? " 
-
-
-## this is the MAIN QUESTION that branches out ##
-while True:
-    taste = input("\nDo you want something salty or sweet? or savory? ").lower().strip()
-    if taste in ["salty", "sweet", "savory"]:
-        break 
-    print("please type either 'salty', 'sweet', or 'savory' or i will come and eat your food >:(") 
-
-# THE SALTY STUFF YUM YUM =========
-
-if taste == "salty":
-    print("Yessss I love the sodium chloride!!") 
-    spiciness = pick_a_number(
-        "On a scale from zero to ten, "
-        "how much do you like spicy food? ",
-        0, 10)
-    if spiciness < 4:
-        print("\nwow u suck")
-        soup = input("Do you like soup? ").strip().lower()
-        if soup.startswith("y"):
-            print("I would recommend a warm bowl of miso soup! OM NOM NOM")
-        else:
-            print("I would recommend a (NOT STALE) ham or tuna sandwich! delicious :D")
-    elif spiciness < 8: 
-        print("\nI seeee.")
-        print("I would recommend some hot nashville fried chicken! gobble gobble crunch crunch")
-    else:
-        print("\nYou're a hot one ;D")
-        print("I would recommend a nice steaming bowl of hot pot >:D WITH EXTRA PEPPERS! YUMMYYY")
+    n = 1
+    while allergies.startswith("y") and n <= 3:
+        print("that's too bad.")
+        n += 1
+        allergies = input("Do you have any dietary restrictions? ").strip().lower()
+        if n == 3:
+            print("just stop asking.")
+            return
+    sweet_level = "would you like a dessert or snack? " 
 
 
-# THE SWEET STUFF OOOOOHHH ==========
-elif taste == "sweet":
-    print("swweeeeet! I LOVE SWEET STUFF!!! ᕕ( ᐛ )ᕗ \n")
+    ## this is the MAIN QUESTION that branches out ##
     while True:
-        sweet_level = input("Would you like a dessert or a snack? ").lower().strip()
-        if sweet_level in ["dessert", "snack"]:
+        taste = input("\nDo you want something salty or sweet? or savory? ").lower().strip()
+        if taste in ["salty", "sweet", "savory"]:
             break 
-        print("please type either 'dessert'or 'snack' or i will come and eat ALL your sweets forever >:(\n") 
+        print("please type either 'salty', 'sweet', or 'savory' or i will come and eat your food >:(") 
 
-    if sweet_level == "dessert":
-        print("GREAT CHOICE DESSERTS ARE MY FAVORITE THING IN THE ENTIRE WORLD!!")
-        chocolate = pick_a_number("On a scale from zero to ten, how much do you like chocolate? ", 0, 10)
-        if chocolate <= 1:
-            print("You suck. I don't recommend anything.")
-        else:
-            if chocolate <= 9:
-                print("coolio! I like chocolate too :D ")
+    # THE SALTY STUFF YUM YUM =========
+
+    if taste == "salty":
+        print("Yessss I love the sodium chloride!!") 
+        spiciness = pick_a_number(
+            "On a scale from zero to ten, "
+            "how much do you like spicy food? ",
+            0, 10)
+        if spiciness < 4:
+            print("\nwow u suck")
+            soup = input("Do you like soup? ").strip().lower()
+            if soup.startswith("y"):
+                print("I would recommend a warm bowl of miso soup! OM NOM NOM")
             else:
-                print("YES YOU'RE AWESOME!!")
-                print("By being a loyal chocolate fan you have unlocked a SPECIAL SECRET MISSION!!! ")
-                print("\n(ps: if you ever see me irl I will treat u to a million dark chocolate specialties :D)")
-                secret_mission()
-            chocolate_chat()
-# THE SAVORY STUFF WEEEEEE ============
-elif taste == "savory":
-    print("yes i love msg too!")
+                print("I would recommend a (NOT STALE) ham or tuna sandwich! delicious :D")
+        elif spiciness < 8: 
+            print("\nI seeee.")
+            print("I would recommend some hot nashville fried chicken! gobble gobble crunch crunch")
+        else:
+            print("\nYou're a hot one ;D")
+            print("I would recommend a nice steaming bowl of hot pot >:D WITH EXTRA PEPPERS! YUMMYYY")
+
+
+    # THE SWEET STUFF OOOOOHHH ==========
+    elif taste == "sweet":
+        print("swweeeeet! I LOVE SWEET STUFF!!! ᕕ( ᐛ )ᕗ \n")
+        while True:
+            sweet_level = input("Would you like a dessert or a snack? ").lower().strip()
+            if sweet_level in ["dessert", "snack"]:
+                break 
+            print("please type either 'dessert'or 'snack' or i will come and eat ALL your sweets forever >:(\n") 
+
+        if sweet_level == "dessert":
+            print("GREAT CHOICE DESSERTS ARE MY FAVORITE THING IN THE ENTIRE WORLD!!")
+            chocolate = pick_a_number("On a scale from zero to ten, how much do you like chocolate? ", 0, 10)
+            if chocolate <= 1:
+                print("You suck. I don't recommend anything.")
+                return
+            else:
+                if chocolate <= 9:
+                    print("coolio! I like chocolate too :D ")
+                else:
+                    print("YES YOU'RE AWESOME!!")
+                    print("By being a loyal chocolate fan you have unlocked a SPECIAL SECRET MISSION!!! ")
+                    print("\n(ps: if you ever see me irl I will treat u to a million dark chocolate specialties :D)")
+                    secret_mission()
+                chocolate_chat()
+    # THE SAVORY STUFF WEEEEEE ============
+    elif taste == "savory":
+        print("yes i love msg too!")
+
+
+food_recommender()
