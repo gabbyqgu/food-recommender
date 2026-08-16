@@ -1,7 +1,8 @@
-print("WELCOMEE!! to the super duper awesome fabulous cool FOOD RECOMMENDER!!!\n")
+import random 
 
 # functions =========
 def pick_a_number(question, min, max):
+# gets the user to pick a number within a specific range #
     while True:
         try:
             number = int(input(question))
@@ -12,10 +13,150 @@ def pick_a_number(question, min, max):
         except ValueError:
             print("bro type a number plz")
 
+def yes_or_no(question):
+# asks the user to reply yes or no #
+    while True:
+        answer = input(question).lower().strip()
+        if answer.startswith("y"):
+            return True
+        elif answer.startswith("n"):
+            return False
+        else:
+            print("Pleaseeeeee answer the yes or no question ._.")
+
+
 def chocolate_chat():
-    chocolate_level = "What's your favorite kind of chocolate? (dark, milk, or white) ".strip().lower()
+# short chocolate shenanigans #
+    while True:
+        chocolate_level = input("What's your favorite kind of chocolate? (dark, milk, or white) ").strip().lower()
+        if chocolate_level in ["dark", "milk", "white"]:
+            break
+        else:
+            print("\nplz write dark, milk, or white or else I will eat all your chocolate forever.")
+    if chocolate_level == "dark":
+        print("YESSS UR AUTOMATICALLY PART OF THE COOL KIDS CLUB! °˖✧◝(⁰▿⁰)◜✧˖°")
+        print("DARK CHOCOLATE IS THE BEST KIND OF CHOCOLATE EVER!!!!")
+        if yes_or_no("Do you wanna hear a joke? :D "):
+            input("ur so awesome! okokokok here it is: "
+                  "what kind of fruit loves chocolate? ")
+            print("a COCOA-NUT!!! HAHAHAHAHAHA. om nom nom")
+        else:
+            print("oh. :(( ok then.")
+    elif chocolate_level == "milk":
+        print("i see i see i get it, milk chocolate is pretty good i guess!")
+        print("Here's an imaginary deluxe piece of beautiful silky milk chocolate as you wait for ur ultimate food rec :DD!!")
+    elif chocolate_level == "white":
+        print("just get out. are you even human (°□°;)")
 
 
+def secret_mission():
+# hangman with the most random words ever! 
+    word_bank = ["fish", "python", "papaya", "brownie", "cake", "caterpillar", "rocks", "mailman", "mountain", "bookstore"]
+    word = random.choice(word_bank) # randomly picks 1 item from a list/string
+    guessed = ["_"] * len(word)
+    hangman = [
+        """
+        -----
+        |   |
+            |
+            |
+            |
+        =========
+        """,
+        """
+        -----
+         |   |
+         O   |
+             |
+             |
+        =========
+        """,
+        """
+        -----
+         |   |
+         O   |
+         |   |
+             |
+        =========
+        """,
+        """
+        -----
+         |   |
+         O   |
+        /|   |
+             |
+        =========
+        """,
+        """
+        -----
+         |   |
+         O   |
+        /|\\  |
+             |
+        =========
+        """,
+        """
+        -----
+         |   |
+         O   |
+        /|\\  |
+        /    |
+        =========
+        """,
+        """
+        -----
+         |   |
+         O   |
+        /|\\  |
+        / \\  |
+        =========
+        """
+    ]
+    wrong_guesses = 0
+    max_attempts = 6
+    print("WELCOME to....HANGMAN!!!!")
+    play_hangman = yes_or_no("ready to play? ")
+    if play_hangman:
+        while wrong_guesses < max_attempts:
+            print("\nWORD: ", " ".join(guessed))
+            guess = input("Guess a letter! : ").lower().strip()
+            if guess.isalpha() and len(guess) == 1:
+                if guess in word:
+                    for i in range(len(word)):
+                        if word[i] == guess:
+                            guessed[i] = guess
+                    print("YAYY!! ✅ KEEP GOINGGG")
+                else:
+                    wrong_guesses += 1
+                    print(hangman[wrong_guesses])
+                    print("aw man ❌ try again!!") 
+                    print(f"Wrong guesses: {wrong_guesses}")
+                if "_" not in guessed:
+                    print("\nYOU'VE WON!!🥳🎉🕺")
+                    print(f"The word was: {word}! :D")
+                    break
+            else:
+                print("Please guess 1 letter!")
+
+        if wrong_guesses == max_attempts:
+            print("\noh no u lost :(")
+            print(f"The word was: {word}!")
+        retry = yes_or_no("Play again? ")
+        if retry:
+            secret_mission()
+    else:
+        print("oh.\n")
+        
+ ################################################
+
+def food_recommender():
+    pass
+print("WELCOMEE!! to the super duper awesome fabulous cool FOOD RECOMMENDER!!!\n")
+start = yes_or_no("✧｡٩(ˊᗜˋ )و✧*｡ \nREADY TO GET YOUR RECOMMENDATION?? ◝(ᵔᗜᵔ)◜")
+if start:
+    pass
+else:
+    print("oh ok then hater I hope your pillow is warm on both sides.")
 allergies = input("Do you have any dietary restrictions? ").strip().lower()
 n = 1
 while allergies.startswith("y") and n <= 3:
@@ -26,7 +167,7 @@ while allergies.startswith("y") and n <= 3:
         print("just stop asking.")
         break # when the condition is met, BREAK out of the loop
 
-sweet_level = "would you like a dessert or snack? "
+sweet_level = "would you like a dessert or snack? " 
 
 
 ## this is the MAIN QUESTION that branches out ##
@@ -61,7 +202,7 @@ if taste == "salty":
 
 # THE SWEET STUFF OOOOOHHH ==========
 elif taste == "sweet":
-    print("swweeeeet! I LOVE SWEET STUFF!!!\n")
+    print("swweeeeet! I LOVE SWEET STUFF!!! ᕕ( ᐛ )ᕗ \n")
     while True:
         sweet_level = input("Would you like a dessert or a snack? ").lower().strip()
         if sweet_level in ["dessert", "snack"]:
@@ -74,12 +215,13 @@ elif taste == "sweet":
         if chocolate <= 1:
             print("You suck. I don't recommend anything.")
         else:
-            if chocolate <= 8:
+            if chocolate <= 9:
                 print("coolio! I like chocolate too :D ")
             else:
                 print("YES YOU'RE AWESOME!!")
-            print("By being a loyal chocolate fan you have unlocked a SPECIAL SECRET MISSION!!! ")
-            secret_mission = input("wip")
+                print("By being a loyal chocolate fan you have unlocked a SPECIAL SECRET MISSION!!! ")
+                print("\n(ps: if you ever see me irl I will treat u to a million dark chocolate specialties :D)")
+                secret_mission()
             chocolate_chat()
 # THE SAVORY STUFF WEEEEEE ============
 elif taste == "savory":
