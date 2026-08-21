@@ -47,6 +47,40 @@ def chocolate_chat():
         print("Here's an imaginary deluxe piece of beautiful silky milk chocolate as you wait for ur ultimate food rec :DD!!")
     elif chocolate_level == "white":
         print("just get out. are you even human (°□°;)")
+        print("so I guess I'll just recommend a white chocolate chip blondie. ok but these are actually really fire "
+        "if you've never had them before. esp with BIG whtie chocolate chunks that are like sorta melty but you can't " 
+        "have any sort of nuts in them like idk who in their right mind puts NUTS into something so delectable but " 
+        "anyway its gotta be slightly crunchy near the edges of the blondie but not so much as a brownie and soft and " 
+        "fudge-y in the middle!! add loads of vanilla and OMG totally add some caramel thatd be SO YUMMYY!! like hidden " 
+        "pockets of caramel!!! ok enjoy! ( ദ്ദി ˙ᗜ˙ )✧ ")
+        return
+    
+def cuisine_chat(cuisine):
+    user_cuisine = input(cuisine).strip().lower()
+    if user_cuisine == "american":
+        print("YEEHAW HOWDY THERE WELCOME TO THE LAND OF THE FREEEEEE 🗽🍔🦅🤠🏈💥")
+    elif user_cuisine == "japanese":
+        print("japanese food is actually peak FANTASTIC CHOICE I LOVE JAPANNN 🌸🍣🗾🍙🏯🍡")
+    elif user_cuisine == "korean":
+        print("안녕하세요!! (HII) ⸜(｡˃ ᵕ ˂ )⸝♡")
+    elif user_cuisine == "chinese":
+        print("NI HAO 我爱你! 🫰🫰(i luv u!!)🥡🐲🥮🥢🧧")
+    elif user_cuisine == "italian":
+        print("Italian food is litearlly my FAVORITE EVERR! I love italy like the food is so good and the gelato is litearlly the best "
+                "and the historical monuments are so cool like i cant believe the pantheon was built like 2000 years ago GENUNIELY INSANE "
+                "and the architecture is so cool but my favorite part by far is def the pasta it just tastes SO MUCH BETTER NO JOKE theres "
+                "like a gazillion types of pasta and sauces but all are really simple but require SO MUCH TECHNIQUE and i just want to be like "
+                "the guy from ratatouille and cook italian food and be happy 🤌🛵🍋🏛️🍕🍝")
+    elif user_cuisine == "mexican":
+        print("hola como estas me gusta food 🪇🤠🌮🌶️🌵")
+    elif user_cuisine == "french":
+        print("oui oui baguette 🥖🥐🗼")
+    elif user_cuisine == "greek":
+        pass
+    elif user_cuisine == "indian":
+        pass
+    else:
+        print("sorry, the super awesome food recommender has not added your cuisine of choice yet.")
 
 
 def secret_mission():
@@ -224,6 +258,27 @@ def food_recommender():
     # THE SAVORY STUFF WEEEEEE ============
     elif taste == "savory":
         print("yes i love msg too!")
+        random_number = pick_a_number("Pick a number any number between 1 and 10: ", 1, 10)
+        if random_number == 8 or random_number == 5:
+            input("HOLY GUACAMOLE YOU'RE A MIND READER!!! HIGH 5 ")
+            print("i just wanted to say that i actually have no idea what the difference is between salty and savory i think savory is just fancier but i dont really know T_T")
+            print("ANYWAYS! you get some special treatment for picking the right number :0")
+            cuisine_chat("What's your favorite cuisine? ")
+        else:
+            print("oops wrong number ಠ╭╮ಠ ")
 
+
+
+
+    feedback = yes_or_no("Did you enjoy your recommendation? ")
+    if feedback:
+        print("YESSS AWESOME I'M SO HAPPY FOR YOU!!!! ᕕ( ᐛ )ᕗ DO ENJOY!!!")
+    else:
+        print("I'm sorry about that :( ")
+        retry = yes_or_no("Would you like to get another recommendation? ")
+        if retry:
+            food_recommender()
+        else:
+            print("Ok I guess see you in the afterlife! weeeeeeeeeeeeeeeeeeee")
 
 food_recommender()
