@@ -40,6 +40,11 @@ def chocolate_chat():
             input("ur so awesome! okokokok here it is: "
                   "what kind of fruit loves chocolate? ")
             print("a COCOA-NUT!!! HAHAHAHAHAHA. om nom nom")
+            joke_likeness = yes_or_no("Did you like the joke?? ")
+            if joke_likeness: 
+                print("omg THANK YOU!! i know i'm just the funniest person ever. 🍫")
+                print("as a thank you enjoy hangman!! ")
+                secret_mission()
         else:
             print("oh. :(( ok then.")
     elif chocolate_level == "milk":
@@ -57,30 +62,105 @@ def chocolate_chat():
     
 def cuisine_chat(cuisine):
     user_cuisine = input(cuisine).strip().lower()
+    print("!disclaimer i am only familiar with american + eastern asian foods so i may be innacurate in other cuisines!")
     if user_cuisine == "american":
         print("YEEHAW HOWDY THERE WELCOME TO THE LAND OF THE FREEEEEE 🗽🍔🦅🤠🏈💥")
+        while True:
+            american_dish = input("pick a dish to dive deeper (っ˘ڡ˘ς):\nburgers :P\nfried\nsouthern 🤠\nthanksgiving-style\n"
+                                  "tailgate! (it's essentially food u can eat while walking/easy to share)\nCOSTCO!").lower().strip()
+            if american_dish in ["burgers", "fried", "southern", "thanksgiving-style", "tailgate", "costco"]:
+                break
+            print("please pick a dish and spell it correctly 🥺 they are all very yummy :D (espeeeeciiallyy costco)")
+        if american_dish == "burgers":
+            pass
+        elif american_dish == "fried":
+            pass
+        elif american_dish == "southern":
+            pass
+        elif american_dish == "thanksgiving-style" or american_dish == "thanksgiving":
+            pass
+        elif american_dish == "tailgate":
+            pass
+        elif american_dish == "costco":
+            print("I LOVE COSTCO I PRACTICALLY LIVE THERE!!!!!!! if you live not in america i envy you bc i keep seeing like amazing costco food court items")
+            while True:
+                costco_hack = input("Do you want to hear some costco hacks(im a costco executive member i know ball)").lower().strip()
+                if costco_hack.startswith("y"):
+                    print("OK LET ME ENLIGHTEN YOU WITH MY COSTCO KNOWLEDGE!")
+                    print("OK if prices end in .99¢ theyre like normal")
+                    print("but if the prices end in .97¢ these are SUPER CHEAP LIKE BUY IT ALLL")
+                    print("if it ends in .88¢ or .49¢ or .79¢ .00¢ its like also really cheap")
+                    print("if theres an asterisk(*) THEN GET IT BECUASE ITS NEVER COMING BACK 😱😱")
+                    print("and if you dont get the hot dog youre really missing out on life")
+                    print("AND theres a 30 day price match so if something goes on sale after you've already bought it YOU CAN LIKE GET IT PRICE MATCHED HOW COOL IS THAT???")
+                    print("and also max out on samples 😌 i promise you they dont care ive gone back like 10x (they hate me)")
+                    print("anyways....")
+                    break
+                elif costco_hack.startswith("n"):
+                   print("oh its ok then!") 
+                   break
+                else:
+                    print("Pleaseeeeee answer yes or no :D if you dont know what costco is its this ELITE warehouse with SAMPLES and you can bulk buy stuff!!")
+            print("ok so i HAVE to recommend the $1.50 hot dog and drink combo ")
+
+
     elif user_cuisine == "japanese":
         print("japanese food is actually peak FANTASTIC CHOICE I LOVE JAPANNN 🌸🍣🗾🍙🏯🍡")
+        while True:
+            japanese_dish = input("pick a dish to dive deeper ദ്ദി ˉ͈̀꒳ˉ͈́ )✧: \nnoodles/soup\nstreet food\nfried\nfishy\nsweet\n").lower().strip()
+            if japanese_dish in ["noodles", "noodles/soup", "soup", "street food", "fried", "fishy", "sweet"]:
+                break 
+            print("please pick a dish and spell it correctly 🥺 they are all very yummy :D") 
+        if japanese_dish == "noodles" or japanese_dish == "noodles/soup" or japanese_dish == "soup":
+            pass
+        elif japanese_dish == "street food":
+            print("so japanese street food is SO ELITE!")
+        elif japanese_dish == "fried":
+            print("this stuff is so addicting i swear. my comfort food 🤗")
+        elif japanese_dish == "fishy":
+            fish_joke = input("what do you call a fish without an eye? ")
+            print("a fsh. ha. ha. ha!! soo witty")
+        elif japanese_dish == "sweet":
+            print("this is the stuff of my DREAMSSSSS")
+
+        print("ദ്ദി ˉ͈̀꒳ˉ͈́ )✧")
+        print("(っ˘ڡ˘ς)")
+        print("૮₍ •⤙•˶")
+
     elif user_cuisine == "korean":
         print("안녕하세요!! (HII) ⸜(｡˃ ᵕ ˂ )⸝♡")
+        while True:
+            korean_dish = input("pi")
+
     elif user_cuisine == "chinese":
         print("NI HAO 我爱你! 🫰🫰(i luv u!!)🥡🐲🥮🥢🧧")
+
     elif user_cuisine == "italian":
         print("Italian food is litearlly my FAVORITE EVERR! I love italy like the food is so good and the gelato is litearlly the best "
                 "and the historical monuments are so cool like i cant believe the pantheon was built like 2000 years ago GENUNIELY INSANE "
                 "and the architecture is so cool but my favorite part by far is def the pasta it just tastes SO MUCH BETTER NO JOKE theres "
                 "like a gazillion types of pasta and sauces but all are really simple but require SO MUCH TECHNIQUE and i just want to be like "
                 "the guy from ratatouille and cook italian food and be happy 🤌🛵🍋🏛️🍕🍝")
+        
     elif user_cuisine == "mexican":
         print("hola como estas me gusta food 🪇🤠🌮🌶️🌵")
+
     elif user_cuisine == "french":
         print("oui oui baguette 🥖🥐🗼")
+
     elif user_cuisine == "greek":
         pass
+
     elif user_cuisine == "indian":
-        pass
+        print("indian food is so good i could eat naan for DAYS! 🕌🪷🍛🧡🤍💚")
+
     else:
         print("sorry, the super awesome food recommender has not added your cuisine of choice yet.")
+        cuisine_repick = yes_or_no("pick another one? ")
+        if cuisine_repick:
+            cuisine_chat(cuisine)
+        else:
+            return
 
 
 def secret_mission():
@@ -198,8 +278,7 @@ def food_recommender():
         if n == 3:
             print("just stop asking.")
             return
-    sweet_level = "would you like a dessert or snack? " 
-
+        
 
     ## this is the MAIN QUESTION that branches out ##
     while True:
@@ -259,7 +338,7 @@ def food_recommender():
     elif taste == "savory":
         print("yes i love msg too!")
         random_number = pick_a_number("Pick a number any number between 1 and 10: ", 1, 10)
-        if random_number == 8 or random_number == 5:
+        if random_number == 8 or random_number == 5 or random_number == 1:
             input("HOLY GUACAMOLE YOU'RE A MIND READER!!! HIGH 5 ")
             print("i just wanted to say that i actually have no idea what the difference is between salty and savory i think savory is just fancier but i dont really know T_T")
             print("ANYWAYS! you get some special treatment for picking the right number :0")
