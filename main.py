@@ -72,15 +72,26 @@ def cuisine_chat(cuisine):
                 break
             print("please pick a dish and spell it correctly 🥺 they are all very yummy :D (espeeeeciiallyy costco)")
         if american_dish == "burgers":
-            pass
+            print("i eat too many burgers for my physical health.(hey if ur ever in the west coast PLEASE get innout. PLEASEE)"
+                  "\n legitametely the best comfort food :D but anyway if ur not in the west coast i recommend a juicy smashburger "
+                  "with the perfect crispy and thin edges, caramelized onions, fresh lettuce and tomatoes, and perfectly melted american cheese "
+                  "to top off the americanness. oh, i forgot the fluffy and toasted brioche bun, buttered (duh). we cant have a burger without fries and a shake!")
         elif american_dish == "fried":
-            pass
+            print("CRUNCH CRUNCH CRUNCHYYYYYY")
+            print("ok hot take but try crispy southern fried chicken with fluffy waffles and maple syrup. like trust the process here but its SO GOOD!!!!")
+            print("if thats not ur thing then some golden onion ringssssssssss auguguhguthgghh")
         elif american_dish == "southern":
-            pass
-        elif american_dish == "thanksgiving-style" or american_dish == "thanksgiving":
-            pass
+            print("SOUTHERN COMFORT FOOD IS SO GOOD 🤠 YEHAWWWW YES MAAM YES SIR")
+            print("i recommend BUTTERY BISCUITS and omg southern style grits is REALLY GOOD(its like blended oatmeal i guess? or like mashed potatoes but chunky... BUT "
+                  "its CREAMY. ITS REALLY REALLY GOOD TRUST) and mac n cheese but its gotta be baked so it has a crispy top and made with like a gazillion cheesessssss.")
+        elif american_dish == "thanksgiving-style":
+            print("HAPPY TURKEY DAY!! gObbBLe goBBLe 🦃🦃🦃")
+            print("if you question my decision, thanksgiving is a WHOLE food subsection. like, theres stuff for JUST thanksgiving.")
+            print("my picks: roasted turkey(duh), creamy(NOT CHUNKY) mashed potatoes with gravy(kfc's is bomb), PUMPKIN/APPLE PIE.(COSTO HAS THE BEST PUMPKIN PIE) and whipped "
+                  "cream on top duh. ughhhhh and cranberry  sauceeeeeee. ok enjoy ur feast without me i guess ")
         elif american_dish == "tailgate":
-            pass
+            print("SHARING FOOD! YESSS SHARING IS CARING <3")
+            print("loaded nachos, buffalo chicken dip, soft giant pretzels but they gotta be crispy on the edges and have that giant flaky salt and cheese dip, AND BROWNIES. OR BROOKIES, YOUR CHOICE!!!!")
         elif american_dish == "costco":
             print("I LOVE COSTCO I PRACTICALLY LIVE THERE!!!!!!! if you live not in america i envy you bc i keep seeing like amazing costco food court items")
             while True:
@@ -101,7 +112,8 @@ def cuisine_chat(cuisine):
                    break
                 else:
                     print("Pleaseeeeee answer yes or no :D if you dont know what costco is its this ELITE warehouse with SAMPLES and you can bulk buy stuff!!")
-            print("ok so i HAVE to recommend the $1.50 hot dog and drink combo ")
+            print("ok so i HAVE to recommend the $1.50 hot dog and drink combo. if you dont get that then like idk what ur doing at costco(unless ur eating samples). try the new limited "
+                  "edition sundaes tho!!! they change quite often in my opinion(my favorite one was the one with caramel and brownies....AHH)")
 
 
     elif user_cuisine == "japanese":
@@ -112,48 +124,53 @@ def cuisine_chat(cuisine):
                 break 
             print("please pick a dish and spell it correctly 🥺 they are all very yummy :D") 
         if japanese_dish == "noodles" or japanese_dish == "noodles/soup" or japanese_dish == "soup":
-            pass
+            print("ykw i HAVE to recommend a steaming bowl of ramen with the RICHEST broth. a jammy egg, green onions, the fish cake swirly thing (🍥)"
+                  " seaweed, melt in your mouth pork belly...what more do you need in life when you have ramen? 🍜")
         elif japanese_dish == "street food":
             print("so japanese street food is SO ELITE!")
+            print("i would try takoyaki. its so good guys. like so good...sweet and savory and crunchy and soft and fluffy, it puts everything you could possibly want in a bite(unless ur not a seafood fan).")
         elif japanese_dish == "fried":
             print("this stuff is so addicting i swear. my comfort food 🤗")
+            print("i would recommend crisky chicken katsu with rice and a heap of finely shreaded cabbage(bc we gotta make up the fried food lol(no it brings like a whole new texture profile and fresh crispy flavor))" 
+                  "amd a drizzle of tangy and sweet tonkatsu sauce. ")
         elif japanese_dish == "fishy":
             fish_joke = input("what do you call a fish without an eye? ")
             print("a fsh. ha. ha. ha!! soo witty")
         elif japanese_dish == "sweet":
             print("this is the stuff of my DREAMSSSSS")
 
-        print("ദ്ദി ˉ͈̀꒳ˉ͈́ )✧")
+        print("\nദ്ദി ˉ͈̀꒳ˉ͈́ )✧")
         print("(っ˘ڡ˘ς)")
         print("૮₍ •⤙•˶")
 
-    elif user_cuisine == "korean":
-        print("안녕하세요!! (HII) ⸜(｡˃ ᵕ ˂ )⸝♡")
-        while True:
-            korean_dish = input("pi")
+#   elif user_cuisine == "korean":
+#       print("안녕하세요!! (HII) ⸜(｡˃ ᵕ ˂ )⸝♡")
 
-    elif user_cuisine == "chinese":
-        print("NI HAO 我爱你! 🫰🫰(i luv u!!)🥡🐲🥮🥢🧧")
+#   elif user_cuisine == "chinese":
+#       print("NI HAO 我爱你! 🫰🫰(i luv u!!)🥡🐲🥮🥢🧧")
 
     elif user_cuisine == "italian":
-        print("Italian food is litearlly my FAVORITE EVERR! I love italy like the food is so good and the gelato is litearlly the best "
+        input("Italian food is litearlly my FAVORITE EVERR! I love italy like the food is so good and the gelato is litearlly the best "
                 "and the historical monuments are so cool like i cant believe the pantheon was built like 2000 years ago GENUNIELY INSANE "
                 "and the architecture is so cool but my favorite part by far is def the pasta it just tastes SO MUCH BETTER NO JOKE theres "
                 "like a gazillion types of pasta and sauces but all are really simple but require SO MUCH TECHNIQUE and i just want to be like "
                 "the guy from ratatouille and cook italian food and be happy 🤌🛵🍋🏛️🍕🍝")
-        
-    elif user_cuisine == "mexican":
-        print("hola como estas me gusta food 🪇🤠🌮🌶️🌵")
+        print("I would recommend a creamy, delectable plate of cacio e pepe, made with  bucatini(best kind of pasta: if you havent had it, you NEED to try it) "
+              "finely grated aged percorino romano and fresh spicy ground black pepercorns. rich, thick, the perfect amount of cheese... and isn't even dense "
+              "because its made without heavy cream! ugh im so hungry writing this...")
 
-    elif user_cuisine == "french":
-        print("oui oui baguette 🥖🥐🗼")
+#    elif user_cuisine == "mexican":
+#        print("hola como estas me gusta food 🪇🤠🌮🌶️🌵")
 
-    elif user_cuisine == "greek":
-        pass
+#   elif user_cuisine == "french":
+#       print("oui oui baguette 🥖🥐🗼")
 
-    elif user_cuisine == "indian":
-        print("indian food is so good i could eat naan for DAYS! 🕌🪷🍛🧡🤍💚")
+#   elif user_cuisine == "greek":
+#       pass
 
+#   elif user_cuisine == "indian":
+#       print("indian food is so good i could eat naan for DAYS! 🕌🪷🍛🧡🤍💚")
+    
     else:
         print("sorry, the super awesome food recommender has not added your cuisine of choice yet.")
         cuisine_repick = yes_or_no("pick another one? ")
@@ -337,14 +354,16 @@ def food_recommender():
     # THE SAVORY STUFF WEEEEEE ============
     elif taste == "savory":
         print("yes i love msg too!")
-        random_number = pick_a_number("Pick a number any number between 1 and 10: ", 1, 10)
-        if random_number == 8 or random_number == 5 or random_number == 1:
-            input("HOLY GUACAMOLE YOU'RE A MIND READER!!! HIGH 5 ")
-            print("i just wanted to say that i actually have no idea what the difference is between salty and savory i think savory is just fancier but i dont really know T_T")
-            print("ANYWAYS! you get some special treatment for picking the right number :0")
-            cuisine_chat("What's your favorite cuisine? ")
-        else:
-            print("oops wrong number ಠ╭╮ಠ ")
+        while True: 
+            random_number = pick_a_number("Pick a number any number between 1 and 10: ", 1, 10)
+            if random_number == 8 or random_number == 5 or random_number == 1:
+                input("HOLY GUACAMOLE YOU'RE A MIND READER!!! HIGH 5 ")
+                print("i just wanted to say that i actually have no idea what the difference is between salty and savory i think savory is just fancier but i dont really know T_T")
+                print("ANYWAYS! you get some special treatment for picking the right number :0")
+                cuisine_chat("What's your favorite cuisine? ")
+                break 
+            else:
+                print("oops wrong number ಠ╭╮ಠ ")
 
 
 
